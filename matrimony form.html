@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ *  {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body {
+     color: #fff;
+     display: flex;
+     height: 300vh;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(135deg , #f794a4, #fdd6bd);
+     padding: 0px;
+     margin: 0;
+ }
+ .container {
+     max-width: 800px;
+     width: 100%;
+     max-height: 3000px;
+     height: auto;
+     padding: 25px 30px;
+     border-radius: 20px;
+     background: linear-gradient(135deg, #fdd6bd   ,#f794a4);
+     cursor: pointer;
+     border: 2px solid #fff;
+     box-shadow:5px 5px 10px #f794a4;
+ }
+ .container:hover {
+     box-shadow: 20px 20px 30px #605e5f;
+     transition: 1.5s ease;
+ }
+ .container .heading {
+     font-size: 25px;
+     font-weight: 1000;
+     position: relative;
+     text-align: center;
+     padding: 0 0 20px 0;
+     text-transform: uppercase;
+     color: #422a2a;
+     font-weight: 600;
+ }
+ .container .heading2 {
+     font-size: 35px;
+     font-weight: 2000;
+     position: relative;
+     text-align: center;
+     padding: 0 0 20px 0;
+     text-transform: uppercase;
+     color: #060606;
+     font-weight: 600;
+ }
+ .container .heading:hover {
+     letter-spacing: 5px;
+     transition: 1s ease;
+     cursor: pointer;
+ }
+.container .heading::before {
+     content: '';
+     position: absolute;
+     height: 3px;
+     left: 0;
+     bottom: 5px;
+     width: 100%;
+     background: linear-gradient(135deg, #f8adf1, rgb(253, 110, 201));
+}
+.container form .card-details {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: rgb(6, 6, 6);
+    text-transform: uppercase ;
+    font-weight: 600;
+}
+form .card-details .card-box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+.card-details .card-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.card-details .card-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(248, 245, 245);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all .5s ease;
+}
+.card-details .card-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(248, 245, 245);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    text-transform: uppercase;
+}
+
+.card-details .card-box input:focus,
+.card-details .card-box input:valid{
+    border-color: #e2b1db;
+}
+form .circle .circle-title {
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid;
+}
+form .circle .category {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form .button {
+    text-align: center;
+}
+form .button input {
+    padding: 10px 0;
+    margin-top: 10px;
+    height: 100%;
+    width: 50%;
+    outline: none;
+    color: rgb(255, 254, 254);
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#f794a4, #fdd6bd);
+    cursor: pointer;
+    border: .5px solid rgb(231, 225, 225);
+}
+form .button  input:hover {
+    box-shadow:10px 10px 15px #737373 ;
+    transition: 1s ease;
+    letter-spacing: 15px;
+}
+form .button input:hover :nth-child(2) {
+    border: 1px solid #fff;
+    transition: 2s ease;
+}
+
+
+
+
+
+
+@media (max-width: 584px) {
+    .container{ max-width: 100%;}
+    form .card-details .card-box{margin-bottom: 15px;width: 100%;}
+    form .circle .category{width: 100%;}
+    .container form .card-details{max-height: 300px;overflow: scroll;}
+    .card-details::_webkit-scrollbar{width: 0;}
+}
+
+</style>    
+
+</head>
+<body>
+
+<div class="container">
+    <div class="heading2">matrimonal Registration form</b></div>
+    <div class="heading">BASIC INFORMATION</div>
+    <form action="#">
+        <div class="card-details">
+            <div class="card-box">
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Enter name" required>
+            </div>
+
+            <div class="card-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter email-id" required>
+            </div>
+
+            <div class="card-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter phone number" required>
+            </div>
+
+            <div class="card-box">
+                <span class="details">Gender</span>
+                <select>
+                    <option value="Select your gender"></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="card-box">
+                <span class="details">Nationality</span>
+                <select >
+                    <option></option>
+                    <option value="">america</option>
+                    <option value="">australia</option>
+                    <option value="">britan</option>
+                    <option value="">bulgaria</option>
+                    <option value="">canada</option>
+                    <option value="">california</option>
+                    <option value="">denmark</option>
+                    <option value="">dubai</option>
+                    <option value="">india</option>
+                    <option value="">israel</option>
+                    <option value="">france</option>
+                    <option value="">thailand</option>
+                    <option value="">switzerland</option>
+                    <option value="">russia</option>
+                    <option value="">venice</option>
+                </select>
+            </div>
+
+            <div class="card-box">
+                <span class="details">State</span>
+                <select >
+                    <option></option>
+                    <option value="">andhra pradesh</option>
+                    <option value="">arunachal pradesh</option>
+                    <option value="">assam</option>
+                    <option value="">bihar</option>
+                    <option value="">chhattisgarh</option>
+                    <option value="">california</option>
+                    <option value="">goa</option>
+                    <option value="">gujarat</option>
+                    <option value="">haryana</option>
+                    <option value="">himachal pradesh</option>
+                    <option value="">jammu and kashmir</option>
+                    <option value="">jharkhand</option>
+                    <option value="">karnataka</option>
+                    <option value="">kerala</option>
+                    <option value="">madhya pradesh</option>
+                    <option value="">maharashtra</option>
+                    <option value="">manipur</option>
+                    <option value="">meghalaya</option>
+                    <option value="">mizoram</option>
+                    <option value="">nagaland</option>
+                    <option value="">odisha</option>
+                    <option value="">punjab</option>
+                    <option value="">rajasthan</option>
+                    <option value="">sikkim</option>
+                    <option value="">tamilnadu</option>
+                    <option value="">telangana</option>
+                    <option value="">tripura</option>
+                    <option value="">uttarpradesh</option>
+                    <option value="">uttarakhand</option>
+                    <option value="">west bengal</option>
+                </select>
+            </div>
+        </div>
+
+       
+
+        <div class="heading">BIRTH INFORMATION</div>
+       <div class="card-details">
+        <div class="card-box">
+            <span class="details">Date Of Birth</span>
+            <input type="date" placeholder="Enter birth date" required>
+        </div>
+
+        <div class="card-box">
+            <span class="details">Place Of Birth</span>
+            <input type="text" placeholder="Enter birth place" required>
+        </div>
+
+        <div class="card-box">
+            <span class="details">Star</span>
+            <input type="text" placeholder="Mee janma nakshatram" required>
+        </div>
+
+        <div class="card-box">
+            <span class="details">Height</span>
+            <select>
+                <option></option>
+                <option>6-feet</option>
+                <option>5 and half-feet</option>
+                <option>5-feet</option>
+                <option>4 and half-feet</option>
+                <option>4-feet</option>
+                <option>3 and half-feet</option>
+                <option>3-feet</option>
+
+            </select>
+        </div>
+
+        <div class="card-box">
+            <span class="details">Gothram</span>
+            <input type="text" placeholder="Mee gotranamam" >
+        </div>
+
+        </div><!--card-details division-->
+
+        <!--for personal INFORMATION-->
+
+        <div class="heading">PERSONAL INFORMATION</div>
+        <div class="card-details">
+            <div class="card-box">
+                <span class="details">Educational Details</span>
+                <input type="text" placeholder="Enter your educational details" required>
+            </div>
+            
+            <div class="card-box">
+                <span class="details">Working Status</span>
+                <input type="text" placeholder="Enter your working place" >
+            </div>
+        </div>
+
+        <!--PARENT DEATILS-->
+
+        <div class="heading">ABOUT FATHER</div>
+        <div class="card-details">
+            <div class="card-box">
+                <span class="details">Father's Name</span>
+                <input type="text" placeholder="Enter your father's name" required>
+            </div>
+            
+            <div class="card-box">
+                <span class="details">Occupation</span>
+                <input type="text" placeholder="what does your father do?" required>
+            </div>
+
+            <div class="card-box">
+                <span class="details">Native Place</span>
+                <input type="text" placeholder="Enter native place" required>
+            </div>
+
+            <div class="card-box">
+                <span class="details">Grand Parents</span>
+                <input type="text" placeholder="Enter your grandparent's name" required>
+            </div>
+
+
+            <div class="card-box">
+                <span class="details">Father's Brothers</span>
+                <input type="text" placeholder="do your father have any brothers?" >
+            </div>
+
+            <div class="card-box">
+                <span class="details">Father's Sisters</span>
+                <input type="text" placeholder="do your father have any sisters?">
+            </div>
+        </div>
+        <!--End of father details-->
+        <!--start of mother details-->
+        <div class="heading">ABOUT MOTHER</div>
+        <div class="card-details">
+            <div class="card-box">
+                <span class="details">Mother's Name</span>
+                <input type="text" placeholder="Enter your mother's name" required>
+            </div>
+            
+            <div class="card-box">
+                <span class="details">Occupation</span>
+                <input type="text" placeholder="what does your  mother do?" required>
+            </div>
+
+            <div class="card-box">
+                <span class="details">Native Place</span>
+                <input type="text" placeholder="Enter native place" required>
+            </div>
+
+            <div class="card-box">
+                <span class="details">Grand Parents</span>
+                <input type="text" placeholder="Enter your grandparent's name" required>
+            </div>
+
+
+            <div class="card-box">
+                <span class="details">Mother's Brothers</span>
+                <input type="text" placeholder="do your mother have any brothers?">
+            </div>
+
+            <div class="card-box">
+                <span class="details">Mother's Sisters</span>
+                <input type="text" placeholder="do your mother have any sisters?" >
+            </div>
+        </div>
+         <!---end of parent details-->
+          
+         <div class="heading">OTHER DETAILS</div>
+         <div class="card-details">
+             <div class="card-box">
+                 <span class="details">Requirements</span>
+                 <input type="text" placeholder="Enter your requirements" required>
+             </div>
+             
+             <div class="card-box">
+                 <span class="details">Financial Status</span>
+                 <input type="text" placeholder="Enter financial status" required>
+             </div>
+ 
+             <div class="card-box">
+                 <span class="details">Property Details</span>
+                 <input type="text" placeholder="Enter your property details" required>
+             </div>
+ 
+             <div class="card-box">
+                 <span class="details">Address</span>
+                 <input type="text" placeholder="Enter your permanent address" required>
+             </div>
+ 
+ 
+             <div class="card-box">
+                 <span class="details">Referred By</span>
+                 <input type="text" placeholder="How did you get to konw us?" required>
+             </div>
+         </div>
+
+        <div class="button">
+            <input type="submit" value="REGISTER">
+        </div>
+
+        
+    </form>
+</div>
+</body>
+</html>
